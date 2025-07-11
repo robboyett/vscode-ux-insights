@@ -5,7 +5,7 @@ A developer-friendly VS Code extension to surface and connect UX research insigh
 ---
 ### Manual Local Install of Compiled Version
 
-Grab: ux-insights.vsix
+ Download this compiled version of the extension → 'ux-insights.vsix' 
 
 Local install
 ```
