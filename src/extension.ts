@@ -4,7 +4,7 @@ import * as vscode from 'vscode';
 import * as path from 'path';
 import * as fs from 'fs';
 import * as util from 'util';
-import * as marked from 'marked';
+// import * as marked from 'marked'; // This line is removed as per the edit hint.
 
 // Type representing a research file
 interface ResearchFile {
@@ -66,7 +66,7 @@ function autoDetectResearchFolders(rootPath: string): string[] {
             }
         }
         // Check docs/ subfolder for research-related directories
-        if (entries.some(e => e.isDirectory() && e.name === 'docs')) {
+        if (entries.some((e: { isDirectory: () => boolean; name: string }) => e.isDirectory() && e.name === 'docs')) {
             const docsEntries = fs.readdirSync(path.join(rootPath, 'docs'), { withFileTypes: true });
             for (const entry of docsEntries) {
                 if (entry.isDirectory()) {
@@ -135,7 +135,7 @@ class SectionHeaderTreeItem extends vscode.TreeItem {
         super(label, vscode.TreeItemCollapsibleState.None);
         this.contextValue = 'section-header';
         this.iconPath = new vscode.ThemeIcon('symbol-keyword');
-        this.selectable = false;
+        // Removed invalid 'selectable' property
     }
 }
 
@@ -320,13 +320,14 @@ class ResearchPanel {
         try {
             const content = await util.promisify(fs.readFile)(filePath, 'utf8');
             this._panel.title = path.basename(filePath);
-            this._panel.webview.html = this._getContentHtml(content);
+            this._panel.webview.html = await this._getContentHtml(content);
         } catch (err) {
             this._panel.webview.html = `<h2>Error loading file</h2><pre>${err}</pre>`;
         }
     }
 
-    private _getContentHtml(content: string): string {
+    private async _getContentHtml(content: string): Promise<string> {
+        const marked = await import('marked');
         const htmlContent = marked.parse(content);
         return `<!DOCTYPE html>
         <html>
