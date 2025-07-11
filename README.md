@@ -1,71 +1,48 @@
-# ux-insights README
+# UX Insights for VS Code
 
-This is the README for your extension "ux-insights". After writing up a brief description, we recommend including the following sections.
-
-## Features
-
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
-
-For example if there is an image subfolder under your extension project workspace:
-
-\!\[feature X\]\(images/feature-x.png\)
-
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
-
-## Requirements
-
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
-
-## Extension Settings
-
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
-
-For example:
-
-This extension contributes the following settings:
-
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
-
-## Known Issues
-
-Calling out known issues can help limit users opening duplicate issues against your extension.
-
-## Release Notes
-
-Users appreciate release notes as you update your extension.
-
-### 1.0.0
-
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
+A developer-friendly VS Code extension to surface and connect UX research insights directly within your codebase. Make research actionable and accessible for everyone on your team.
 
 ---
 
-## Following extension guidelines
+## Features
 
-Ensure that you've read through the extensions guidelines and follow the best practices for creating your extension.
+- **Research Insights Sidebar**: Browse all markdown-based research and UX documentation in a dedicated sidebar view.
+- **Auto-Discovery of Research Folders**: Automatically finds folders like `research`, `ux`, `insights`, or configure your own search paths.
+- **Relevant Insights for Current File**: Instantly see which research files are relevant to the file you're editing, highlighted at the top of the sidebar and in the status bar.
+- **Quick Access & Rich Preview**: Open any research file in a beautiful, readable Markdown webview panel.
+- **Status Bar Integration**: Get notified when relevant insights are available for your current file—just click the lightbulb icon to view them.
+- **Instant Refresh**: Add or update research files and refresh the list with a single click.
 
-* [Extension Guidelines](https://code.visualstudio.com/api/references/extension-guidelines)
+## Getting Started
 
-## Working with Markdown
+1. **Install** this extension from the VS Code Marketplace or your Extensions panel.
+2. **Add research files** (Markdown, `.md`) to folders like `research`, `ux`, `insights`, or configure your own paths (see below).
+3. **Open the Research Insights sidebar** from the Explorer pane.
+4. **Click any file** to preview it, or use the status bar lightbulb to see relevant insights for your current file.
 
-You can author your README using Visual Studio Code. Here are some useful editor keyboard shortcuts:
+## Configuration
 
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux).
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux).
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets.
+You can customize how and where the extension looks for research files:
 
-## For more information
+- `researchInsights.searchPaths` (array): Folders to search for research markdown files. Defaults to common research/UX folder names.
+- `researchInsights.autoDetect` (boolean): Automatically detect research folders in your workspace. Defaults to `true`.
 
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
+Configure these in your VS Code `settings.json` or via the Settings UI.
 
-**Enjoy!**
+## Commands
+
+- `ux-insights.openResearchPanel`: Open a quick file selector for all research files.
+- `ux-insights.refreshResearchFiles`: Refresh the research file list.
+- `ux-insights.openResearchFile`: Open a selected research file in a webview.
+
+## Requirements
+
+No special requirements. Works with any VS Code workspace containing markdown research files.
+
+## Contributing
+
+Contributions, issues, and feature requests are welcome! Please open an issue or pull request on GitHub.
+
+## License
+
+MIT — see [LICENSE](LICENSE) for details.
