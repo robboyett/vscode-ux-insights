@@ -3,6 +3,15 @@
 A developer-friendly VS Code extension to surface and connect UX research insights directly within your codebase. Make research actionable and accessible for everyone on your team.
 
 ---
+### Manual Local Install of Compiled Version
+
+Grab: ux-insights.vsix
+
+Local install
+```
+code --install-extension ux-insights-0.0.1.vsix
+```
+---
 
 ## Features
 
