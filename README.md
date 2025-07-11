@@ -9,7 +9,7 @@ Grab: ux-insights.vsix
 
 Local install
 ```
-code --install-extension ux-insights.vsix
+code --install-extension "[PATH TO THE FILE]/ux-insights.vsix"
 ```
 ---
 
