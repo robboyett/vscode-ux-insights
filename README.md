@@ -24,7 +24,7 @@ code --install-extension "[PATH TO THE FILE]/ux-insights.vsix"
 
 ## Getting Started
 
-1. **Install** this extension from the VS Code Marketplace or your Extensions panel.
+1. **Install** Download this compiled version of the extension → 'ux-insights.vsix' and install 
 2. **Add research files** (Markdown, `.md`) to folders like `research`, `ux`, `insights`, or configure your own paths (see below).
 3. **Open the Research Insights sidebar** from the Explorer pane.
 4. **Click any file** to preview it, or use the status bar lightbulb to see relevant insights for your current file.
