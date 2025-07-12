@@ -2,10 +2,13 @@
 
 An engineer-friendly VS Code extension to surface and connect UX research insights directly within your codebase. Make research actionable and accessible for everyone on your team.
 
+![Screenshot of the VS Code plugin showing the research insights sidebar, with markdown documentation automatically surfaced next to relevant code.](Marketing-Image-01.png)
+![Markdown research file open in a webview panel inside VS Code, displaying a styled, readable layout with headings, links, and formatting preserved.](Marketing-Image-02.png)
+
 ---
 ### Manual Local Install of Compiled Version
 
- Download this compiled version of the extension → 'ux-insights.vsix' 
+[Download the compiled extension → ux-insights.vsix](https://github.com/your-username/vscode-ux-insights/releases/latest/download/ux-insights.vsix)
 
 Local install
 ```
