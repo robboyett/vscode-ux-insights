@@ -1,4 +1,4 @@
-# UX Insights for VS Code
+# UX & Research Insights for VS Code
 
 An engineer-friendly VS Code extension to surface and connect UX research insights directly within your codebase. Make research actionable and accessible for everyone on your team.
 
