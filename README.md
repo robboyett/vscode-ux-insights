@@ -8,7 +8,7 @@ An engineer-friendly VS Code extension to surface and connect UX research insigh
 ---
 ### Manual Local Install of Compiled Version
 
-[Download the compiled extension → ux-insights.vsix](https://github.com/your-username/vscode-ux-insights/releases/latest/download/ux-insights.vsix)
+[Download the compiled extension → ux-insights.vsix](./ux-insights.vsix)
 
 Local install
 ```
